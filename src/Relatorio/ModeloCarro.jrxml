@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="700" pageHeight="842" columnWidth="660" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd8cc929-fd07-4e2a-a599-2b295c50d819">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="d1b2b8bc-1f90-4590-bb4e-a9eac0b3732a">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="244c2352-0610-45a5-8052-0eed8b562d69">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+		<parameter name="ItemDataSource" class="java.lang.String" evaluationTime="Early"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="numero_chassi" class="java.lang.Integer"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numero_chassi" class="java.lang.Integer"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="cor" class="java.lang.String"/>
+	<field name="ano" class="java.lang.Integer"/>
+	<field name="potencia_cv" class="java.lang.Integer"/>
+	<field name="valor" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="20" width="420" height="49" uuid="64f5ad5d-be30-4509-8bc7-88731a36d6fa"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relátorio Carros]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="469" y="30" width="180" height="30" uuid="0b0ec63f-1a58-4f1f-9532-5025317c614e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="100" height="30" uuid="17168c2d-c9ba-443e-8071-8275c39f45e8"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero Chassi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="0f30430e-9f65-4721-9218-a25e90130a85"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="80" height="30" uuid="0975b140-3a25-47f9-bca1-d537d8d3a0c8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" uuid="b4270120-2122-4810-89b9-3eaa851c842f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="100" height="30" uuid="fe0bc071-05c8-4b8c-8bc8-96948780af40"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Potencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="30" uuid="2d04c29f-fcfd-48d4-aa4e-61ed2006f44f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cor]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="30" width="100" height="19" uuid="c189c8ab-61ae-439e-86b7-3ce365f859fc"/>
+				<textFieldExpression><![CDATA[$F{numero_chassi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="30" width="100" height="19" uuid="5245afba-845a-4854-a2fe-e213dd1a5e06"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="30" width="100" height="19" uuid="77a57e49-8247-46d7-a051-c4d329873002"/>
+				<textFieldExpression><![CDATA[$F{cor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="30" width="100" height="19" uuid="393d9b0d-402f-47bd-bdad-7f047cc39263"/>
+				<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="30" width="100" height="19" uuid="6200d1ac-5ad2-49a6-9874-4368d21c7415"/>
+				<textFieldExpression><![CDATA[$F{potencia_cv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="30" width="80" height="19" uuid="9ebec04e-b8d1-4fc2-aff8-fca11b37d2b1"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="92" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="30" width="700" height="30" uuid="c97805c9-2234-4751-9d0a-35f9bb85d291"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="62" width="700" height="30" uuid="2ab222a8-d001-4cf3-9a0d-2f078207bfb7"/>
+				<textElement textAlignment="Center" markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criado por DoisLucas]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
